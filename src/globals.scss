@@ -1,0 +1,14 @@
+$primary-color: #3c5ed6;
+$text-color: #09022c;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+}
+
+body {
+    font-family: 'Courier New', Courier, monospace;
+    background-color: $primary-color;
+}

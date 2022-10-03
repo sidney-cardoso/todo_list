@@ -1,8 +1,9 @@
-import React from "react";
-import './App.scss'
+import React from 'react';
+import Main from './components/Main'
+import './globals.scss';
 
-export default () => {
-  return (
-    <h1>Hello</h1>
-  )
+export default function () {
+    return (
+        <Main />
+    )
 }
