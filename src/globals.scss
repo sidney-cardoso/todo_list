@@ -1,5 +1,8 @@
-$primary-color: #3c5ed6;
-$text-color: #09022c;
+$bg-color: #4f3eaf;
+$text-color: #000067;
+$form-color: #d49cfd;
+$primary-color: #ffcd50;
+$secondary-color: #e2e16d;
 
 * {
     margin: 0;
@@ -10,5 +13,5 @@ $text-color: #09022c;
 
 body {
     font-family: 'Courier New', Courier, monospace;
-    background-color: $primary-color;
+    background-color: $bg-color;
 }
