@@ -52,6 +52,43 @@
         button[type="submit"]:active {
             background-color: globals.$primary-color;
         }
+
     }
 
+    .tasks {
+        margin-top: 30px;
+
+        li {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px;
+            transition: background 1s;
+
+            .edit {
+                margin-right: 15px;
+                color: globals.$secondary-color;
+            }
+
+            .delete {
+                color: #e62525;
+            }
+
+            .delete,
+            .edit {
+                transition: color 1s;
+                cursor: pointer;
+            }
+
+        }
+
+        li:hover {
+            background-color: globals.$bg-color;
+
+            .edit,
+            .delete {
+                color: black;
+            }
+        }
+    }
 }
