@@ -65,6 +65,7 @@
             padding: 10px;
             transition: background 1s;
 
+
             .edit {
                 margin-right: 15px;
                 color: globals.$secondary-color;
@@ -78,6 +79,11 @@
             .edit {
                 transition: color 1s;
                 cursor: pointer;
+            }
+
+            span {
+                display: flex;
+                align-items: center;
             }
 
         }
