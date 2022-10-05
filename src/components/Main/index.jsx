@@ -1,5 +1,6 @@
 import React, { Component } from "react";
-import { FaPlus, FaEdit, FaWindowClose } from 'react-icons/fa'
+import Form from "../Form";
+import Tasks from '../Tasks'
 
 import './style.scss'
 
@@ -28,6 +29,8 @@ export default class Main extends Component {
 
     handleSubmit = e => {
         e.preventDefault()
+
+
         const { tasks, index } = this.state
         let { newTask } = this.state
         newTask = newTask.trim()
@@ -44,7 +47,6 @@ export default class Main extends Component {
             })
         } else {
             newTasks[index] = newTask
-
             this.setState({
                 tasks: [...newTasks],
                 index: -1
@@ -79,34 +81,17 @@ export default class Main extends Component {
         return (
             <div className="main">
                 <h1>Lista de tarefas</h1>
-                <form action="#" className="form" onSubmit={this.handleSubmit}>
-                    <input onChange={this.handleChange} type="text" value={newTask} />
-                    <button type="submit">
-                        <FaPlus />
-                    </button>
-                </form>
+                <Form
+                    handleSubmit={this.handleSubmit}
+                    handleChange={this.handleChange}
+                    newTask={newTask}
+                />
+                <Tasks
+                    tasks={tasks}
+                    handleEdit={this.handleEdit}
+                    handleDelete={this.handleDelete}
+                />
 
-                <ul className="tasks">
-                    {tasks.map((task, index) => {
-                        return (
-
-                            <li key={task}>
-                                {task}
-                                <span>
-                                    <FaEdit
-                                        className="edit"
-                                        onClick={e => this.handleEdit(e, index)}
-                                    />
-                                    <FaWindowClose
-                                        className="delete"
-                                        onClick={e => this.handleDelete(e, index)}
-                                    />
-
-                                </span>
-                            </li>
-                        )
-                    })}
-                </ul>
             </div>
 
         )
