@@ -27,15 +27,12 @@
         opacity: .7;
         cursor: pointer;
         transition: opacity 1s;
+
+        &:hover {
+            opacity: 1;
+        }
+        &:active {
+            background-color: globals.$primary-color;
+        }
     }
-
-    button[type="submit"]:hover {
-        opacity: 1;
-
-    }
-
-    button[type="submit"]:active {
-        background-color: globals.$primary-color;
-    }
-
 }

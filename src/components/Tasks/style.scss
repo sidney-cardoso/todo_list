@@ -31,14 +31,13 @@
             align-items: center;
         }
 
-    }
-
-    li:hover {
-        background-color: globals.$bg-color;
-
-        .edit,
-        .delete {
-            color: black;
+        &:hover {
+            background-color: globals.$bg-color;
+            .edit,
+            .delete {
+                color: black;
+            }
         }
     }
+
 }
